@@ -5,7 +5,7 @@ class App extends Component {
 
     render(){
 
-        return <span>Hello World</span>
+        return <span>Simple React Setup</span>
 
     }
 
