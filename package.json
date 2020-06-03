@@ -1,0 +1,11 @@
+{
+  "name": "react-components",
+  "version": "0.0.1",
+  "description": "Declarative react components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parvez Dittia",
+  "license": "ISC"
+}
