@@ -15,6 +15,18 @@ function ReactChain(props) {
 	console.log('ReactChain');
 
 	for (let i = 0; i < links.length; i++) {
+		try {
+			if (links[i].type.name !== 'ReactIf') {
+				console.error('Not a valid conditional component');
+				return output;
+			}
+		} catch (e) {
+			console.error('Not a valid conditional component');
+			return output;
+		}
+	}
+
+	for (let i = 0; i < links.length; i++) {
 		if (links[i].props.when) {
 			output = links[i];
 			break;
@@ -24,5 +36,5 @@ function ReactChain(props) {
 	return output;
 }
 
-export { ReactChain };
+export { ReactChain, ReactElse };
 export default ReactIf;
