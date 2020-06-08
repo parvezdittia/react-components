@@ -9,6 +9,16 @@ function ReactIf(props) {
 	return output;
 }
 
+function ReactElse(props) {
+	let output = null;
+
+	if (props.children) {
+		output = props.children;
+	}
+
+	return output;
+}
+
 function ReactChain(props) {
 	let links = props.children;
 	let output = null;
@@ -16,7 +26,10 @@ function ReactChain(props) {
 
 	for (let i = 0; i < links.length; i++) {
 		try {
-			if (links[i].type.name !== 'ReactIf') {
+			if (
+				links[i].type.name !== 'ReactIf' &&
+				links[i].type.name !== 'ReactElse'
+			) {
 				console.error('Not a valid conditional component');
 				return output;
 			}
@@ -31,6 +44,10 @@ function ReactChain(props) {
 			output = links[i];
 			break;
 		}
+	}
+
+	if (output === null && links[links.length - 1].type.name === 'ReactElse') {
+		output = links[links.length - 1];
 	}
 
 	return output;
