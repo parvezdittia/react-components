@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import ReactIf from './ReactIf';
+import ReactIf, { ReactChain } from './ReactIf';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			flag: true,
+			flag: 1,
 		};
 	}
 
 	render() {
 		return (
-			<ReactIf when={this.state.flag}>
-				<span>Simple react if</span>
-			</ReactIf>
+			<ReactChain>
+				<ReactIf when={this.state.flag}>
+					<span>Simple react if 1</span>
+				</ReactIf>
+				<ReactIf when={!this.state.flag}>
+					<span>Simple react if 2</span>
+				</ReactIf>
+			</ReactChain>
 		);
 	}
 }
