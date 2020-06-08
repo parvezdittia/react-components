@@ -1,16 +1,11 @@
-import React from 'react';
-
 function ReactIf(props) {
+	let output = null;
 
-    let output = null;
+	if (props.when) {
+		output = props.children;
+	}
 
-    if(props.when){
-        output = props.children;
-    } 
-
-    return output;
-
+	return output;
 }
 
 export default ReactIf;
-
