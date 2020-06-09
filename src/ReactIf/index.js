@@ -2,7 +2,6 @@ let ReactIf;
 let ReactElseIf;
 ReactIf = ReactElseIf = (props) => {
 	let output = null;
-	console.log('ReactIf');
 
 	if (props.when) {
 		output = props.children;
