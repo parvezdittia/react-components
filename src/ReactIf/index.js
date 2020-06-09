@@ -1,4 +1,6 @@
-function ReactIf(props) {
+let ReactIf;
+let ReactElseIf;
+ReactIf = ReactElseIf = (props) => {
 	let output = null;
 	console.log('ReactIf');
 
@@ -7,7 +9,7 @@ function ReactIf(props) {
 	}
 
 	return output;
-}
+};
 
 function ReactElse(props) {
 	let output = null;
@@ -22,12 +24,12 @@ function ReactElse(props) {
 function ReactChain(props) {
 	let links = props.children;
 	let output = null;
-	console.log('ReactChain');
 
 	for (let i = 0; i < links.length; i++) {
 		try {
 			if (
 				links[i].type.name !== 'ReactIf' &&
+				links[i].type.name !== 'ReactElseIf' &&
 				links[i].type.name !== 'ReactElse'
 			) {
 				console.error('Not a valid conditional component');
@@ -53,5 +55,5 @@ function ReactChain(props) {
 	return output;
 }
 
-export { ReactChain, ReactElse };
+export { ReactChain, ReactElseIf, ReactElse };
 export default ReactIf;
