@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render "when" boolean value is false Renders null if condition is  1`] = `null`;
+
+exports[`Render "when" boolean value is false Renders null if condition is 0 1`] = `null`;
+
+exports[`Render "when" boolean value is false Renders null if condition is false 1`] = `null`;
+
+exports[`Render "when" boolean value is false Renders null if condition is null 1`] = `null`;
+
+exports[`Render "when" boolean value is false Renders null if condition is undefined 1`] = `null`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is  1`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is [object Object] 1`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is [object Object] 2`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is -1 1`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is 1 1`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is a 1`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is abc 1`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is true 1`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render "when" boolean value is true Renders child component if condition is true 2`] = `
+<span>
+  Hello World
+</span>
+`;
+
+exports[`Render nested ReactIfs OuterCondition: false and InnerCondition: false = Output null 1`] = `null`;
+
+exports[`Render nested ReactIfs OuterCondition: false and InnerCondition: true = Output null 1`] = `null`;
+
+exports[`Render nested ReactIfs OuterCondition: true and InnerCondition: false = Output null 1`] = `null`;
+
+exports[`Render nested ReactIfs OuterCondition: true and InnerCondition: true = Output Child Component 1`] = `
+<span>
+  Hello World
+</span>
+`;

@@ -24,6 +24,11 @@ function ReactChain(props) {
 	let links = props.children;
 	let output = null;
 
+	if (!links.length) {
+		console.error('ReactChain expect conditional component');
+		return output;
+	}
+
 	for (let i = 0; i < links.length; i++) {
 		try {
 			if (
@@ -31,11 +36,10 @@ function ReactChain(props) {
 				links[i].type.name !== 'ReactElseIf' &&
 				links[i].type.name !== 'ReactElse'
 			) {
-				console.error('Not a valid conditional component');
-				return output;
+				throw new Error('Not a valid conditional component');
 			}
-		} catch (e) {
-			console.error('Not a valid conditional component');
+		} catch (error) {
+			console.error(error);
 			return output;
 		}
 	}
